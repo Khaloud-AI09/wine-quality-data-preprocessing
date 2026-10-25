@@ -1,0 +1,133 @@
+{
+  "project": "Wine Quality Dataset Preprocessing",
+  "source": "UCI Machine Learning Repository, Wine Quality (dataset 186)",
+  "source_url": "https://archive.ics.uci.edu/dataset/186/wine+quality",
+  "generated_at_utc": "2026-10-25T18:52:36.198072+00:00",
+  "original_shape": {
+    "rows": 6497,
+    "columns": 13
+  },
+  "final_shape": {
+    "rows": 5320,
+    "columns": 15
+  },
+  "source_file_rows": {
+    "red": 1599,
+    "white": 4898
+  },
+  "missing_values_before": {
+    "fixed_acidity": 0,
+    "volatile_acidity": 0,
+    "citric_acid": 0,
+    "residual_sugar": 0,
+    "chlorides": 0,
+    "free_sulfur_dioxide": 0,
+    "total_sulfur_dioxide": 0,
+    "density": 0,
+    "ph": 0,
+    "sulphates": 0,
+    "alcohol": 0,
+    "quality": 0,
+    "wine_type": 0
+  },
+  "numeric_conversion_failures": {
+    "fixed_acidity": 0,
+    "volatile_acidity": 0,
+    "citric_acid": 0,
+    "residual_sugar": 0,
+    "chlorides": 0,
+    "free_sulfur_dioxide": 0,
+    "total_sulfur_dioxide": 0,
+    "density": 0,
+    "ph": 0,
+    "sulphates": 0,
+    "alcohol": 0,
+    "quality": 0
+  },
+  "duplicate_rows_before": 1177,
+  "duplicate_rows_removed": 1177,
+  "missing_numeric_values_imputed_by_median": {
+    "fixed_acidity": 0,
+    "volatile_acidity": 0,
+    "citric_acid": 0,
+    "residual_sugar": 0,
+    "chlorides": 0,
+    "free_sulfur_dioxide": 0,
+    "total_sulfur_dioxide": 0,
+    "density": 0,
+    "ph": 0,
+    "sulphates": 0,
+    "alcohol": 0,
+    "quality": 0
+  },
+  "iqr_outlier_counts_not_removed": {
+    "fixed_acidity": 304,
+    "volatile_acidity": 279,
+    "citric_acid": 143,
+    "residual_sugar": 141,
+    "chlorides": 237,
+    "free_sulfur_dioxide": 44,
+    "total_sulfur_dioxide": 10,
+    "density": 3,
+    "ph": 49,
+    "sulphates": 163,
+    "alcohol": 1,
+    "quality": 183
+  },
+  "missing_values_after": {
+    "fixed_acidity": 0,
+    "volatile_acidity": 0,
+    "citric_acid": 0,
+    "residual_sugar": 0,
+    "chlorides": 0,
+    "free_sulfur_dioxide": 0,
+    "total_sulfur_dioxide": 0,
+    "density": 0,
+    "ph": 0,
+    "sulphates": 0,
+    "alcohol": 0,
+    "quality": 0,
+    "wine_type": 0,
+    "total_acidity": 0,
+    "sulfur_dioxide_ratio": 0
+  },
+  "duplicate_rows_after": 0,
+  "engineered_features": {
+    "total_acidity": "fixed_acidity + volatile_acidity + citric_acid",
+    "sulfur_dioxide_ratio": "free_sulfur_dioxide / total_sulfur_dioxide; zero when denominator is zero"
+  },
+  "outlier_policy": "Flag with the 1.5*IQR rule; retain observations unless domain evidence justifies removal.",
+  "output_csv": "data/processed/wine_quality_clean.csv",
+  "original_data_types": {
+    "fixed_acidity": "float64",
+    "volatile_acidity": "float64",
+    "citric_acid": "float64",
+    "residual_sugar": "float64",
+    "chlorides": "float64",
+    "free_sulfur_dioxide": "float64",
+    "total_sulfur_dioxide": "float64",
+    "density": "float64",
+    "ph": "float64",
+    "sulphates": "float64",
+    "alcohol": "float64",
+    "quality": "int64",
+    "wine_type": "str"
+  },
+  "final_data_types": {
+    "fixed_acidity": "float64",
+    "volatile_acidity": "float64",
+    "citric_acid": "float64",
+    "residual_sugar": "float64",
+    "chlorides": "float64",
+    "free_sulfur_dioxide": "float64",
+    "total_sulfur_dioxide": "float64",
+    "density": "float64",
+    "ph": "float64",
+    "sulphates": "float64",
+    "alcohol": "float64",
+    "quality": "int64",
+    "wine_type": "str",
+    "total_acidity": "float64",
+    "sulfur_dioxide_ratio": "float64"
+  }
+}

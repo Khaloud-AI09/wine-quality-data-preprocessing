@@ -1,0 +1,45 @@
+WINE QUALITY PREPROCESSING — RUN SUMMARY
+============================================
+Original rows: 6,497
+Original columns: 13
+Final rows: 5,320
+Final columns: 15
+Exact duplicate rows identified before removal: 1,177
+Duplicate rows remaining: 0
+Missing cells remaining: 0
+
+Missing values before cleaning:
+{
+  "fixed_acidity": 0,
+  "volatile_acidity": 0,
+  "citric_acid": 0,
+  "residual_sugar": 0,
+  "chlorides": 0,
+  "free_sulfur_dioxide": 0,
+  "total_sulfur_dioxide": 0,
+  "density": 0,
+  "ph": 0,
+  "sulphates": 0,
+  "alcohol": 0,
+  "quality": 0,
+  "wine_type": 0
+}
+
+IQR outlier counts (flagged, not removed):
+{
+  "fixed_acidity": 304,
+  "volatile_acidity": 279,
+  "citric_acid": 143,
+  "residual_sugar": 141,
+  "chlorides": 237,
+  "free_sulfur_dioxide": 44,
+  "total_sulfur_dioxide": 10,
+  "density": 3,
+  "ph": 49,
+  "sulphates": 163,
+  "alcohol": 1,
+  "quality": 183
+}
+
+Clean dataset: data\processed\wine_quality_clean.csv
+Detailed report: reports\preprocessing_report.json
